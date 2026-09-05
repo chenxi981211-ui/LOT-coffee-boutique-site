@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>LOT. coffee boutique — specialty coffee in Delft</title>
+<meta name="description" content="A small specialty coffee boutique on the Voldersgracht in the old centre of Delft. Filter coffee, espresso, cinnamon buns, and beans to take home. Order ahead and pick up at the counter.">
+<meta property="og:title" content="LOT. coffee boutique">
+<meta property="og:description" content="Specialty coffee on the Voldersgracht in Delft. 4.9 stars from 361 Google reviews.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23241c18'/><text x='16' y='23' font-family='Georgia,serif' font-size='17' fill='%23faf7f2' text-anchor='middle'>L.</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">LOT.</span>
+      <span class="brand-sub">coffee boutique</span>
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="Primary">
+      <a href="#story" data-i18n="nav.story">The shop</a>
+      <a href="#menu" data-i18n="nav.menu">Menu</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#visit" data-i18n="nav.visit">Visit</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="langBtn" type="button" aria-label="Switch language">
+        <span id="langLabel">NL</span>
+      </button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/>
+        </svg>
+      </button>
+      <button class="btn btn-solid order-btn" type="button" data-open-order>
+        <span data-i18n="cta.order">Order ahead</span>
+        <span class="cart-pip" id="cartPip" hidden>0</span>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-media">
+      <img id="heroImg" alt="" referrerpolicy="no-referrer" fetchpriority="high">
+      <span class="hero-scrim" aria-hidden="true"></span>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Voldersgracht 6 · Delft</p>
+      <h1 class="hero-title">
+        <span data-i18n="hero.title1">Small shop,</span>
+        <em data-i18n="hero.title2">serious coffee.</em>
+      </h1>
+      <p class="hero-lede" data-i18n="hero.lede">
+        A specialty coffee boutique tucked into the old centre of Delft — filter brewed by hand,
+        espresso pulled with care, cinnamon buns while they last, and shelves of beans to take home.
+      </p>
+      <div class="hero-meta">
+        <a class="pill pill-rating" id="ratingPill" href="#reviews">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>4,9</strong>
+          <span class="pill-sub" data-i18n="hero.reviews">361 Google reviews</span>
+        </a>
+        <span class="pill pill-status" id="statusPill" data-status="loading">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="statusText">—</span>
+        </span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-solid btn-lg" type="button" data-open-order data-i18n="cta.orderAhead">Order ahead</button>
+        <a class="btn btn-ghost btn-lg" href="#menu" data-i18n="cta.seeMenu">See the menu</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <section class="section story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="eyebrow" data-i18n="story.eyebrow">The shop</p>
+        <h2 data-i18n="story.title">A quiet corner of Delft that happens to be very good at coffee.</h2>
+        <p data-i18n="story.p1">
+          LOT. sits on the Voldersgracht, a short walk from the Markt. Inside it is white and light:
+          plants along the shelves, coffee gear and bags of beans for sale, nerdy coffee magazines
+          left out on the table, and a long bench where people settle in for an hour.
+        </p>
+        <p data-i18n="story.p2">
+          The bar runs on a rotating single origin for filter and a house blend for espresso.
+          The owner will happily talk you through either — several reviewers say the advice is
+          half the reason they come back. It is a women-owned business, and it is small,
+          so mornings are the calmest time to visit.
+        </p>
+        <ul class="facts" id="factsList"></ul>
+      </div>
+      <figure class="story-figure reveal">
+        <img id="storyImg" alt="" referrerpolicy="no-referrer" loading="lazy">
+        <figcaption id="storyCaption"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section menu-section" id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="menu.eyebrow">Menu</p>
+        <h2 data-i18n="menu.title">What’s on the bar</h2>
+        <p class="section-lede" data-i18n="menu.lede">
+          Tap the plus on anything you like — it goes straight into an order you can pick up at the counter.
+        </p>
+      </div>
+
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu sections"></div>
+      <div id="menuPanels"></div>
+
+      <p class="fineprint" data-i18n="menu.fineprint">
+        Prices are indicative and the line-up changes with the season — the board in the shop is the last word.
+      </p>
+    </div>
+  </section>
+
+  <section class="section reviews-section" id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="reviews.eyebrow">Reviews</p>
+        <h2 data-i18n="reviews.title">What people say on Google</h2>
+      </div>
+
+      <div class="rating-summary reveal">
+        <div class="rating-score">
+          <strong>4,9</strong>
+          <span class="stars big" aria-hidden="true">★★★★★</span>
+          <span class="rating-count" data-i18n="reviews.count">from 361 reviews</span>
+        </div>
+        <div class="rating-tags">
+          <p class="tags-label" data-i18n="reviews.mentioned">Most mentioned</p>
+          <ul id="reviewTags"></ul>
+        </div>
+      </div>
+
+      <div class="review-grid" id="reviewGrid"></div>
+
+      <p class="review-more">
+        <a class="btn btn-ghost" id="allReviewsLink" href="#" target="_blank" rel="noopener" data-i18n="reviews.all">Read all 361 reviews on Google</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section gallery-section" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Gallery</p>
+        <h2 data-i18n="gallery.title">The place, in pictures</h2>
+        <p class="section-lede" data-i18n="gallery.lede">Photos from the shop’s Google listing — guests’ and the owner’s.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <section class="section visit-section" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-info reveal">
+        <p class="eyebrow" data-i18n="visit.eyebrow">Visit</p>
+        <h2 data-i18n="visit.title">Voldersgracht 6, Delft</h2>
+        <p class="address">
+          Voldersgracht 6<br>
+          2611 ET Delft<br>
+          Nederland
+        </p>
+        <p class="visit-note" data-i18n="visit.note">
+          Two minutes from the Markt, on the little canal behind the Nieuwe Kerk. Come by bike, come on foot.
+        </p>
+        <div class="visit-actions">
+          <a class="btn btn-solid" id="directionsBtn" href="#" target="_blank" rel="noopener" data-i18n="visit.directions">Get directions</a>
+          <button class="btn btn-ghost" type="button" data-open-order data-i18n="cta.order">Order ahead</button>
+        </div>
+
+        <table class="hours" id="hoursTable">
+          <caption class="sr-only" data-i18n="visit.hoursCaption">Opening hours</caption>
+          <tbody></tbody>
+        </table>
+        <p class="fineprint" data-i18n="visit.hoursNote">Hours as listed on Google Maps. Holidays and busy weeks can shift things.</p>
+      </div>
+      <div class="visit-map reveal">
+        <iframe id="mapFrame" title="Map showing LOT. coffee boutique on Voldersgracht in Delft" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="brand-mark small">LOT.</p>
+      <p class="footer-note" data-i18n="footer.note">Specialty coffee boutique · Voldersgracht 6, Delft</p>
+    </div>
+    <div class="footer-links">
+      <a href="#menu" data-i18n="nav.menu">Menu</a>
+      <a href="#visit" data-i18n="nav.visit">Visit</a>
+      <a id="footerMaps" href="#" target="_blank" rel="noopener">Google Maps</a>
+    </div>
+    <p class="footer-credit" data-i18n="footer.credit">
+      Opening hours, reviews and photos come from the shop’s Google Maps listing.
+    </p>
+  </div>
+</footer>
+
+<!-- Order drawer -->
+<div class="drawer-scrim" id="drawerScrim" hidden></div>
+<aside class="drawer" id="orderDrawer" aria-hidden="true" aria-labelledby="drawerTitle" role="dialog" aria-modal="true" hidden>
+  <div class="drawer-head">
+    <div>
+      <p class="eyebrow" data-i18n="order.eyebrow">Order ahead</p>
+      <h2 id="drawerTitle" data-i18n="order.title">Your order</h2>
+    </div>
+    <button class="icon-btn" id="drawerClose" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="drawer-body" id="drawerBody">
+    <p class="drawer-intro" data-i18n="order.intro">
+      Put your order together here, pick a time, and show the ticket at the counter. Nothing is sent
+      and nothing is charged — payment happens in the shop.
+    </p>
+
+    <div id="cartEmpty" class="cart-empty">
+      <p data-i18n="order.empty">Your order is empty.</p>
+      <button class="btn btn-ghost" type="button" id="emptyBrowse" data-i18n="order.browse">Browse the menu</button>
+    </div>
+
+    <ul class="cart-list" id="cartList"></ul>
+
+    <div class="order-form" id="orderForm" hidden>
+      <div class="field">
+        <label class="field-label" data-i18n="order.where">Where are you drinking it?</label>
+        <div class="seg" id="serviceSeg" role="radiogroup">
+          <button type="button" role="radio" aria-checked="true" data-service="in" data-i18n="order.inShop">In the shop</button>
+          <button type="button" role="radio" aria-checked="false" data-service="takeaway" data-i18n="order.takeaway">Takeaway</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="pickupTime" data-i18n="order.when">Pick-up time</label>
+        <select id="pickupTime"></select>
+        <p class="field-hint" id="pickupHint"></p>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="orderName" data-i18n="order.name">Name for the cup</label>
+        <input id="orderName" type="text" autocomplete="given-name" maxlength="40" placeholder="…">
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="orderNote" data-i18n="order.notes">Anything else?</label>
+        <textarea id="orderNote" rows="2" maxlength="200" placeholder="…"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-foot" id="drawerFoot" hidden>
+    <div class="total-row">
+      <span data-i18n="order.total">Total</span>
+      <strong id="cartTotal">€0,00</strong>
+    </div>
+    <button class="btn btn-solid btn-block" id="placeOrder" type="button" data-i18n="order.place">Create my ticket</button>
+    <button class="btn btn-quiet btn-block" id="clearCart" type="button" data-i18n="order.clear">Clear order</button>
+  </div>
+
+  <!-- Ticket view -->
+  <div class="ticket" id="ticket" hidden>
+    <div class="ticket-card">
+      <p class="ticket-label" data-i18n="ticket.label">Show this at the counter</p>
+      <p class="ticket-code" id="ticketCode">LOT-0000</p>
+      <dl class="ticket-meta" id="ticketMeta"></dl>
+      <ul class="ticket-items" id="ticketItems"></ul>
+      <p class="ticket-total"><span data-i18n="order.total">Total</span> <strong id="ticketTotal">€0,00</strong></p>
+      <p class="ticket-fine" data-i18n="ticket.fine">Pay in the shop. Prices are indicative — the counter is the last word.</p>
+    </div>
+    <button class="btn btn-ghost btn-block" id="copyTicket" type="button" data-i18n="ticket.copy">Copy order as text</button>
+    <button class="btn btn-quiet btn-block" id="newOrder" type="button" data-i18n="ticket.new">Start a new order</button>
+  </div>
+</aside>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo">
+  <button class="lb-close icon-btn" id="lbClose" type="button" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev icon-btn" id="lbPrev" type="button" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <figure class="lb-figure">
+    <img id="lbImg" alt="" referrerpolicy="no-referrer">
+    <figcaption id="lbCaption"></figcaption>
+  </figure>
+  <button class="lb-nav lb-next icon-btn" id="lbNext" type="button" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
