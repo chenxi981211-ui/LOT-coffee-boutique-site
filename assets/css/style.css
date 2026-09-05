@@ -13,7 +13,7 @@
   --accent: #8a5232;
   --signal: #6d7a56;
 
-  --serif: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
   --sans: 'Jost', 'Futura', 'Avenir Next', -apple-system, BlinkMacSystemFont, sans-serif;
   --script: 'Sacramento', 'Snell Roundhand', cursive;
 
@@ -82,9 +82,8 @@ a { color: inherit; }
 .display {
   font-family: var(--serif);
   font-weight: 400;
-  font-variation-settings: 'opsz' 88;
-  line-height: .98;
-  letter-spacing: -0.018em;
+  line-height: 1.02;
+  letter-spacing: -0.008em;
   margin: 0;
 }
 .display em {
@@ -230,7 +229,7 @@ body { padding-right: var(--rail); }
 .hero-top { display: flex; flex-direction: column; align-items: flex-start; gap: 1.6rem; }
 .hero-lede { max-width: 30ch; font-size: .92rem; color: var(--ink-soft); margin: 0; }
 
-.hero-display { font-size: clamp(2.3rem, 4vw, 3.9rem); margin-bottom: 1.5rem; }
+.hero-display { font-size: clamp(2.5rem, 4.4vw, 4.4rem); margin-bottom: 1.5rem; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: .5rem; }
 
 .chip {
@@ -238,7 +237,7 @@ body { padding-right: var(--rail); }
   border: 1px solid var(--line); border-radius: 999px; padding: .45rem 1rem;
   font-size: .82rem; letter-spacing: .01em; text-decoration: none; color: var(--ink-soft);
 }
-.chip strong { font-family: var(--serif); font-size: .95rem; font-weight: 500; color: var(--ink); }
+.chip strong { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--ink); }
 .chip-sub { color: var(--ink-faint); }
 .chip-status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-faint); }
 .chip-status[data-status='open'] .dot { background: var(--signal); }
@@ -315,7 +314,7 @@ body { padding-right: var(--rail); }
 .story-figure { margin: 0; border-right: 1px solid var(--line); overflow: hidden; position: relative; min-height: 440px; }
 .story-figure img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .story-copy { padding: clamp(2.4rem, 5vw, 4.4rem) var(--gut); align-self: center; }
-.story-display { font-size: clamp(1.9rem, 3.2vw, 3rem); margin-bottom: 1.8rem; }
+.story-display { font-size: clamp(2.1rem, 3.5vw, 3.3rem); margin-bottom: 1.8rem; }
 .story-copy p { color: var(--ink-soft); font-size: .95rem; max-width: 42ch; }
 
 .facts { list-style: none; padding: 0; margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; }
@@ -360,7 +359,7 @@ body { padding-right: var(--rail); }
 .menu-panel { padding: clamp(1.6rem, 3vw, 2.6rem) var(--gut) 0; }
 .menu-panel[hidden] { display: none; }
 .menu-note {
-  font-family: var(--serif); font-style: italic; font-size: 1.08rem;
+  font-family: var(--serif); font-style: italic; font-size: 1.2rem;
   color: var(--ink-soft); margin: 0 0 1.8rem;
 }
 .menu-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(2rem, 5vw, 5rem); }
@@ -374,7 +373,7 @@ body { padding-right: var(--rail); }
 .mi-desc { font-size: .9rem; color: var(--ink-soft); margin: .3rem 0 0; max-width: 46ch; }
 .tag {
   font-family: var(--serif); font-style: italic; text-transform: none;
-  font-size: .85rem; letter-spacing: 0; color: var(--accent);
+  font-size: .95rem; letter-spacing: 0; color: var(--accent);
 }
 .add-btn {
   flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line);
@@ -393,7 +392,7 @@ body { padding-right: var(--rail); }
 }
 /* The measure has to be set on the display type itself — 'ch' in the parent
    would be counted in the small sans, giving a comically narrow column. */
-.lead-quote .display { font-size: clamp(1.7rem, 3.4vw, 2.9rem); max-width: 22ch; }
+.lead-quote .display { font-size: clamp(1.9rem, 3.7vw, 3.2rem); max-width: 22ch; }
 .lead-quote footer {
   font-size: .64rem; letter-spacing: .2em; text-transform: uppercase;
   color: var(--ink-faint); margin-top: 1.4rem;
@@ -404,7 +403,7 @@ body { padding-right: var(--rail); }
   padding: 1.6rem var(--gut); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
 .score { display: flex; align-items: baseline; gap: .7rem; }
-.score strong { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; line-height: 1.15; }
+.score strong { font-family: var(--serif); font-size: 2.7rem; font-weight: 400; line-height: 1.15; }
 .score-tags { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; }
 .score-tags li {
   font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
@@ -453,7 +452,7 @@ body { padding-right: var(--rail); }
 
 .visit-section { display: grid; grid-template-columns: 1fr 1fr; }
 .visit-copy { padding: clamp(2.6rem, 5vw, 4.4rem) var(--gut); border-right: 1px solid var(--line); }
-.visit-display { font-size: clamp(2rem, 3.6vw, 3.2rem); margin-bottom: 1.6rem; }
+.visit-display { font-size: clamp(2.2rem, 3.9vw, 3.5rem); margin-bottom: 1.6rem; }
 .visit-note { color: var(--ink-soft); font-size: .95rem; max-width: 36ch; }
 .hours { width: 100%; max-width: 24rem; border-collapse: collapse; margin: 2rem 0; }
 .hours td {
@@ -554,12 +553,12 @@ html[data-theme='dark'] .visit-map iframe { filter: invert(.92) hue-rotate(180de
 .drawer-foot { padding: 1.2rem 1.5rem 1.5rem; border-top: 1px solid var(--ink); display: grid; gap: .5rem; }
 .total-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .6rem; }
 .total-row .label { margin: 0; }
-.total-row strong { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; }
+.total-row strong { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; }
 
 .ticket { flex: 1; overflow-y: auto; padding: 1.5rem; display: grid; align-content: start; gap: .5rem; background: var(--paper); }
 .ticket-card { border: 1px solid var(--ink); padding: 1.8rem 1.5rem; margin-bottom: 1rem; text-align: center; }
 .ticket-card .label { margin-bottom: .6rem; }
-.ticket-code { font-size: 2.3rem; letter-spacing: .02em; margin: 0 0 1.4rem; }
+.ticket-code { font-size: 2.5rem; letter-spacing: .01em; margin: 0 0 1.4rem; }
 .ticket-meta {
   display: grid; grid-template-columns: auto 1fr; gap: .4rem 1.2rem; text-align: left;
   font-size: .8rem; margin: 0 0 1.3rem;
@@ -574,7 +573,7 @@ html[data-theme='dark'] .visit-map iframe { filter: invert(.92) hue-rotate(180de
 .ticket-items small { color: var(--ink-faint); }
 .ticket-total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--line); padding-top: .9rem; margin: 0 0 .9rem; }
 .ticket-total .label { margin: 0; }
-.ticket-total strong { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+.ticket-total strong { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; }
 .ticket-fine { font-size: .68rem; color: var(--ink-faint); margin: 0; }
 
 /* ------------------------------------------------------------ lightbox */
