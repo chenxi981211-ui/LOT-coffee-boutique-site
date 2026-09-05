@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20260905184702">
+<link rel="stylesheet" href="assets/css/style.css?v=20260905191152">
 </head>
 <body id="top">
 
@@ -216,7 +216,13 @@
       <p class="fineprint" data-i18n="visit.hoursNote">Hours as listed on Google Maps.</p>
     </div>
     <div class="visit-map">
-      <iframe id="mapFrame" title="Map showing LOT. coffee boutique on Voldersgracht in Delft" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="map" id="mapBlock" role="img" aria-label="Map of Voldersgracht 6, Delft"></div>
+      <a class="map-card" id="mapCard" href="#" target="_blank" rel="noopener">
+        <span class="map-card-name">LOT. <em>coffee boutique</em></span>
+        <span class="map-card-line">Voldersgracht 6 · Delft</span>
+        <span class="map-card-cta" data-i18n="visit.openMaps">Open in Google Maps</span>
+      </a>
+      <p class="map-credit">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>
     </div>
   </section>
 </main>
@@ -335,7 +341,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="assets/js/data.js?v=20260905184702"></script>
-<script src="assets/js/app.js?v=20260905184702"></script>
+<script src="assets/js/data.js?v=20260905191152"></script>
+<script src="assets/js/app.js?v=20260905191152"></script>
 </body>
 </html>

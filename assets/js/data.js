@@ -18,8 +18,8 @@ const SHOP = {
     'https://www.google.com/maps/dir/?api=1&destination=LOT.+coffee+boutique%2C+Voldersgracht+6%2C+2611+ET+Delft&destination_place_id=ChIJqYVaPMS1xUcRWXvfqFQ3N7I',
   reviewsUrl:
     'https://www.google.com/maps/place/LOT.+coffee+boutique/@52.0118456,4.3582259,17z/data=!4m8!3m7!1s0x47c5b5c43c5a85a9:0xb2373754a8df7b59!8m2!3d52.0118883!4d4.3581667!9m1!1b1!16s%2Fg%2F11k6ppmjj7',
-  mapEmbed:
-    'https://www.google.com/maps?q=LOT.+coffee+boutique,+Voldersgracht+6,+2611+ET+Delft&z=17&output=embed',
+  lat: 52.0118883,
+  lng: 4.3581667,
 };
 
 /* Opening hours in minutes from midnight, keyed by JS getDay() (0 = Sunday).
@@ -41,16 +41,15 @@ const PHOTOS = [
   {
     id: 'AHRPTWkxLShsfJk0jI5cWbxXU5_6A5GhBo02Poq5vHPxBMHZJlnWrc-JZWGJ-9YtDKhzztfAlxOAxBXgALCLxcQhYe1qKxXy-wbMlQBo1cA8QCeVFLGR8A45UmsMPKhqLfBCWsF7ZXRWFA',
     alt: { en: 'The LOT. shopfront on Voldersgracht in central Delft', nl: 'De gevel van LOT. aan de Voldersgracht in hartje Delft' },
-    tall: true,
   },
   {
     id: 'AHRPTWlQDRkDqmg3pqa2u1hDpy2mUH_KDPUSVRlvqLXg7YyQQy1rKiy16BZkApbjoBfhaU9Ux6tpag04ou9390Plm98qbt08SUg8pa8EMHnyjpo3BWCCaPK2-z8ITq1RUquZwNKkHtFB',
     alt: { en: 'Cappuccino and a pastry on a small plate, seen from above', nl: 'Cappuccino en gebak op een bordje, van bovenaf' },
+    pos: 'center 30%',
   },
   {
     id: 'AHRPTWl8_ldLZCpudx9j5or2e13DcAd9Io_Hrr4SYsQ6-H-mRe74pEgOjeBKnnzWJVDRagpxpuWdoKSKtnEj0nC0eEKPZ3zLlq5pU4cL9WIR8hNMVaj1dQ8Ipenbp9uP7GQSOldDaN7j9w',
     alt: { en: 'Iced latte held up in front of the shop window', nl: 'IJskoffie voor de etalage van de zaak' },
-    tall: true,
   },
   {
     id: 'AHRPTWke1825CSzH6xpEe3ALYx96GtO86ANwsS0gKIImyd8g5lZVBVw6rSASg5WMhMmAa0Bc81C8sj3QPZQvhdCOF1nAMb9jXvj71iUZokQ3sQRCeRdr4fDfB8hSk9gbDcwh8P9w2xVo',
@@ -58,8 +57,8 @@ const PHOTOS = [
   },
   {
     id: 'AHRPTWlMzV0DiojwnoYc0QVdaoTUayf8AFFL49RlY0RAffa1jH8jO3Ot_0dC-zfopEIkwHwVGEmNX8Rpd2uE9wWvouRAzJ7y6Mohs1PDVzTTqExnL1Sam43bIs9oFhj1ba4zx2c3evv1c6zsWp3p',
-    alt: { en: 'Coffee, water and a cookie on a tray, guests on the terrace', nl: 'Koffie, water en een koekje op een dienblad, gasten op het terras' },
-    tall: true,
+    alt: { en: 'Coffee, water and a stroopwafel at the window seat, canal houses outside', nl: 'Koffie, water en een stroopwafel aan het raam, grachtenpanden buiten' },
+    pos: 'center 55%',
   },
   {
     id: 'AHRPTWlZekmm1ZBTkbp70BbTl08Zc4Fx7IZZD2tlxzis4G5NfBoZxK_R7n7CYz9rYA-PeCcA3dg6s2qttpJusdcxMufKmgKHsYas25dFCllVhWjXqhcDTNYbtFoaA-fpFiZ3wehvGaOK',
@@ -72,12 +71,10 @@ const PHOTOS = [
   {
     id: 'AHRPTWlvy9ZQn_hB4g78Xec4Kk35ME_2izEcdwhPumMrU_q-G87xZX2h5ZAmSY808Xn5TSAHgloCJvJHtW51zdApiIoBkvyyp4wbfogbID76zQZ6NXdWjTKsCmLOKhXAg1KIkWTg39Pd',
     alt: { en: 'Inside: white shelves with beans and brewing kit, plants, a long bench', nl: 'Binnen: witte schappen met bonen en brouwspullen, planten, een lange bank' },
-    wide: true,
   },
   {
     id: 'AHRPTWm3hRuZTjJi-hBBzBzpqlk1VBRi0r2oWrkanHTG_Ir6UuIuuuU0w72WoKoR2Ra4txuYFtDSfdhjqYMgpG2ot-LXLzHTJb2uFOU3FGEjandEayNsjtYlzIslzjOXirg5SzCGBpI5',
     alt: { en: 'Cappuccino with latte art next to a glass of water', nl: 'Cappuccino met latte art naast een glas water' },
-    tall: true,
   },
   {
     id: 'AHRPTWlPa8yOVEEYUtqGj8wbAOKTNhmjaKwDYKP8Rl1YOgJ1cA_1Q_yHvgf_kDKNBn0Ll-psvnCE4svAbcOOXDAPFjwugWCp_G4Vv60duUWboEArfDdB-AsNfqIlSjNmaWkNhjHQFa4',
@@ -86,11 +83,15 @@ const PHOTOS = [
   {
     id: 'AHRPTWmSr7ZbXFfY50QGZ5xz6B4FoqWOqGMBQY5_9er9ALVkNvWXA9xtF12VWawqOcnO8K1I0F9kdjaqEehfBBHF5fs0sNsI9szZu8GvMSegvqLfZz11kABiQa76Tg2P_CTw0J4Q6WYs24AfZIlW',
     alt: { en: 'The counter, with bunting and a vase of flowers', nl: 'De toonbank, met vlaggetjes en een vaas bloemen' },
-    wide: true,
   },
 ];
 
 const HERO_PHOTO = PHOTOS[0];
+
+/* The gallery is a curated eight, not everything on the listing: the blurry
+   cold brew and the near-duplicate latte shots are left out. Eight fills a
+   four-column grid exactly, so there is never a hole in the last row. */
+const GALLERY = [0, 6, 2, 7, 1, 10, 8, 4];
 
 /* Menu. Prices in euros — indicative, edit freely. */
 const MENU = [

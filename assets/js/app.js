@@ -36,7 +36,8 @@
       'orderCta.body': 'Build your order here, choose a time inside opening hours, and collect it at the counter. Nothing is charged online — you pay in the shop.',
       'visit.label': 'Visit',
       'visit.note': 'Two minutes from the Markt, on the little canal behind the Nieuwe Kerk. Come by bike, come on foot.',
-      'visit.directions': 'Directions', 'visit.hoursCaption': 'Opening hours',
+      'visit.directions': 'Directions', 'visit.openMaps': 'Open in Google Maps',
+      'visit.hoursCaption': 'Opening hours',
       'visit.hoursNote': 'Hours as listed on Google Maps.',
       'footer.tag': 'Coffee boutique · Delft', 'footer.explore': 'Explore', 'footer.find': 'Find us',
       'footer.credit': 'Opening hours, reviews and photographs come from the shop’s Google Maps listing.',
@@ -98,7 +99,8 @@
       'orderCta.body': 'Stel je bestelling samen, kies een tijd binnen de openingstijden en haal hem op aan de bar. Online wordt niets afgeschreven — je betaalt in de zaak.',
       'visit.label': 'Bezoek',
       'visit.note': 'Twee minuten van de Markt, aan het grachtje achter de Nieuwe Kerk. Kom op de fiets, kom te voet.',
-      'visit.directions': 'Route', 'visit.hoursCaption': 'Openingstijden',
+      'visit.directions': 'Route', 'visit.openMaps': 'Openen in Google Maps',
+      'visit.hoursCaption': 'Openingstijden',
       'visit.hoursNote': 'Tijden zoals vermeld op Google Maps.',
       'footer.tag': 'Coffee boutique · Delft', 'footer.explore': 'Ontdek', 'footer.find': 'Vind ons',
       'footer.credit': 'Openingstijden, reviews en foto’s komen van de Google Maps-pagina van de zaak.',
@@ -295,7 +297,7 @@
     /* Superscript counts are an editorial flourish — screen readers skip them. */
     setCount('#menuCount', MENU.reduce((n, section) => n + section.items.length, 0));
     setCount('#reviewCount', SHOP.reviewCount);
-    setCount('#galleryCount', PHOTOS.length);
+    setCount('#galleryCount', GALLERY.length);
 
     const lead = REVIEWS[0];
     $('#leadQuoteText').textContent = '“' + lead.text.split('. ')[0].replace(/\.$/, '') + '.”';
@@ -307,14 +309,7 @@
     $('#footerMaps').href = SHOP.mapsPlace;
     $('#footerHours').textContent = todayLine();
 
-    /* The map is loaded once the block has a real size — Google's embed reads
-       the iframe's dimensions when it loads and will not resize afterwards. */
-    const frame = $('#mapFrame');
-    if (!frame.src) {
-      const load = () => { frame.src = SHOP.mapEmbed; };
-      if (document.readyState === 'complete') load();
-      else window.addEventListener('load', load, { once: true });
-    }
+    renderMap();
   }
 
   function setCount(selector, value) {
@@ -420,16 +415,76 @@
     )).join('');
   }
 
+  /* The curated eight, resolved once so the grid and the lightbox agree. */
+  function galleryPhotos() {
+    return GALLERY.map((index) => PHOTOS[index]).filter(Boolean);
+  }
+
   function renderGallery() {
-    $('#galleryGrid').innerHTML = PHOTOS.map((photo, index) => {
-      const shape = photo.tall ? ' class="tall"' : photo.wide ? ' class="wide"' : '';
-      return (
-        '<button type="button"' + shape + ' data-photo="' + index + '">' +
-          '<img loading="lazy" referrerpolicy="no-referrer" src="' + photoUrl(photo, 800, 800) +
-          '" alt="' + photo.alt[state.lang].replace(/"/g, '&quot;') + '">' +
-        '</button>'
-      );
-    }).join('');
+    $('#galleryGrid').innerHTML = galleryPhotos().map((photo, index) => (
+      '<button type="button" data-photo="' + index + '">' +
+        '<img loading="lazy" referrerpolicy="no-referrer" src="' + photoUrl(photo, 900, 1200) +
+        '" alt="' + escapeHtml(photo.alt[state.lang]) + '"' +
+        (photo.pos ? ' style="object-position:' + photo.pos + '"' : '') + '>' +
+      '</button>'
+    )).join('');
+  }
+
+  /* Static map built from OpenStreetMap tiles. An iframe embed is at the mercy
+     of Google's consent interstitial and renders blank for a lot of visitors;
+     plain tile images always draw. */
+  function renderMap() {
+    const block = $('#mapBlock');
+    if (!block) return;
+    const zoom = 17;
+    const scale = Math.pow(2, zoom);
+    const xExact = (SHOP.lng + 180) / 360 * scale;
+    const yExact = (1 - Math.asinh(Math.tan(SHOP.lat * Math.PI / 180)) / Math.PI) / 2 * scale;
+    const originX = Math.floor(xExact) - 2;
+    const originY = Math.floor(yExact) - 2;
+    const cols = 4;
+    const rows = 4;
+
+    let tiles = '';
+    for (let row = 0; row < rows; row += 1) {
+      for (let col = 0; col < cols; col += 1) {
+        tiles += '<img alt="" data-src="https://tile.openstreetmap.org/' + zoom + '/' +
+          (originX + col) + '/' + (originY + row) + '.png" style="left:' +
+          (col * 256) + 'px;top:' + (row * 256) + 'px">';
+      }
+    }
+
+    /* Keep the shop under the centre of the block whatever size it ends up. */
+    const markerX = (xExact - originX) * 256;
+    const markerY = (yExact - originY) * 256;
+    block.innerHTML =
+      '<div class="map-tiles" style="width:' + (cols * 256) + 'px;height:' + (rows * 256) +
+      'px;margin-left:' + -markerX + 'px;margin-top:' + -markerY + 'px">' + tiles +
+      '<span class="map-pin" style="left:' + markerX + 'px;top:' + markerY + 'px"></span></div>';
+
+    $('#mapCard').href = SHOP.directionsUrl;
+    loadMapTiles(block);
+  }
+
+  /* Tiles are fetched as the section comes into range rather than with
+     loading="lazy", so the map is never left blank if the browser decides not
+     to honour lazy loading. */
+  function loadMapTiles(block) {
+    const draw = () => $$('img[data-src]', block).forEach((img) => {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    });
+    if (!('IntersectionObserver' in window)) { draw(); return; }
+    const watcher = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        draw();
+        watcher.disconnect();
+      }
+    }, { rootMargin: '800px 0px' });
+    watcher.observe(block);
+    /* Safety net: if the observer never fires, draw the map anyway rather than
+       leave an empty block. */
+    setTimeout(() => { draw(); watcher.disconnect(); }, 3000);
   }
 
   function renderHours() {
@@ -704,14 +759,15 @@
   }
 
   function paintLightbox() {
-    const photo = PHOTOS[lbIndex];
+    const photo = galleryPhotos()[lbIndex];
     $('#lbImg').src = photoUrl(photo, 1600, 1600);
     $('#lbImg').alt = photo.alt[state.lang];
     $('#lbCaption').textContent = photo.alt[state.lang];
   }
 
   function moveLightbox(step) {
-    lbIndex = (lbIndex + step + PHOTOS.length) % PHOTOS.length;
+    const count = galleryPhotos().length;
+    lbIndex = (lbIndex + step + count) % count;
     paintLightbox();
   }
 

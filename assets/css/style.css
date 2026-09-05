@@ -425,15 +425,19 @@ body { padding-right: var(--rail); }
 
 /* ------------------------------------------------------------- gallery */
 
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(150px, 17vw, 230px); border-top: 1px solid var(--line); }
+/* Eight photos, four across, every tile the same 4:5 — the grid always fills. */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
 .gallery-grid button {
   padding: 0; border: 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
   background: var(--paper-2); cursor: zoom-in; overflow: hidden; position: relative;
+  aspect-ratio: 4 / 5;
 }
-.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.3,1); }
-.gallery-grid button:hover img { transform: scale(1.05); }
-.gallery-grid .tall { grid-row: span 2; }
-.gallery-grid .wide { grid-column: span 2; }
+.gallery-grid button:nth-child(4n) { border-right: 0; }
+.gallery-grid img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+  transition: transform .8s cubic-bezier(.2,.7,.3,1);
+}
+.gallery-grid button:hover img { transform: scale(1.04); }
 
 /* ------------------------------------------------------------ order cta */
 
@@ -466,9 +470,40 @@ body { padding-right: var(--rail); }
   background: var(--accent); margin-right: .6rem; vertical-align: middle;
 }
 .visit-actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
-.visit-map { overflow: hidden; }
-.visit-map iframe { width: 100%; height: 100%; min-height: 460px; border: 0; display: block; filter: saturate(.75) contrast(1.02); }
-html[data-theme='dark'] .visit-map iframe { filter: invert(.92) hue-rotate(180deg) saturate(.6); }
+.visit-map { overflow: hidden; position: relative; min-height: 460px; background: var(--paper-2); }
+.map { position: absolute; inset: 0; overflow: hidden; }
+.map-tiles { position: absolute; left: 50%; top: 50%; }
+.map-tiles img {
+  position: absolute; width: 256px; height: 256px;
+  filter: saturate(.35) contrast(.95) brightness(1.02);
+}
+html[data-theme='dark'] .map-tiles img { filter: invert(.92) hue-rotate(180deg) saturate(.35) brightness(.95); }
+.map-pin {
+  position: absolute; width: 13px; height: 13px; border-radius: 50%;
+  background: var(--accent); border: 2px solid #fff;
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
+  transform: translate(-50%, -50%);
+}
+.map-card {
+  position: absolute; left: 1.4rem; bottom: 1.4rem; z-index: 2;
+  display: grid; gap: .3rem; padding: 1.1rem 1.3rem;
+  background: var(--paper); border: 1px solid var(--ink); text-decoration: none;
+  max-width: 17rem;
+}
+.map-card-name { font-family: var(--sans); font-size: .95rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.map-card-name em { font-family: var(--script); font-size: 1.05rem; font-style: normal; letter-spacing: 0; text-transform: none; }
+.map-card-line { font-size: .84rem; color: var(--ink-soft); }
+.map-card-cta {
+  font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-top: .35rem;
+}
+.map-card:hover .map-card-cta { color: var(--ink); }
+.map-credit {
+  position: absolute; right: .6rem; bottom: .4rem; z-index: 2; margin: 0;
+  font-size: .62rem; color: var(--ink-faint); background: color-mix(in srgb, var(--paper) 80%, transparent);
+  padding: .1rem .4rem;
+}
+.map-credit a { color: inherit; }
 
 /* -------------------------------------------------------------- footer */
 
@@ -633,6 +668,8 @@ html[data-theme='dark'] .visit-map iframe { filter: invert(.92) hue-rotate(180de
   .visit-copy { border-bottom: 1px solid var(--line); }
   .menu-list { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid button:nth-child(2n) { border-right: 0; }
+  .gallery-grid button:nth-child(4n) { border-right: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .score-row .btn { margin-left: 0; }
 }
