@@ -9,40 +9,46 @@
   const I18N = {
     en: {
       'skip': 'Skip to content',
-      'nav.story': 'The shop', 'nav.menu': 'Menu', 'nav.reviews': 'Reviews',
+      'nav.signatures': 'Signatures', 'nav.menu': 'Menu', 'nav.reviews': 'Reviews',
       'nav.gallery': 'Gallery', 'nav.visit': 'Visit',
-      'cta.order': 'Order ahead', 'cta.orderAhead': 'Order ahead', 'cta.seeMenu': 'See the menu',
-      'hero.eyebrow': 'Voldersgracht 6 · Delft',
-      'hero.title1': 'Small shop,', 'hero.title2': 'serious coffee.',
-      'hero.lede': 'A specialty coffee boutique tucked into the old centre of Delft — filter brewed by hand, espresso pulled with care, cinnamon buns while they last, and shelves of beans to take home.',
+      'cta.order': 'Order', 'cta.orderAhead': 'Start an order', 'cta.menu': 'The menu',
+      'hero.lede': 'A specialty coffee boutique on the Voldersgracht, in the old centre of Delft. Filter brewed by hand, espresso pulled with care, and shelves of beans to take home.',
+      'hero.line1': 'Come for the coffee,', 'hero.line2': 'stay for the quiet.',
       'hero.reviews': '361 Google reviews',
-      'story.eyebrow': 'The shop',
-      'story.title': 'A quiet corner of Delft that happens to be very good at coffee.',
-      'story.p1': 'LOT. sits on the Voldersgracht, a short walk from the Markt. Inside it is white and light: plants along the shelves, coffee gear and bags of beans for sale, nerdy coffee magazines left out on the table, and a long bench where people settle in for an hour.',
-      'story.p2': 'The bar runs on a rotating single origin for filter and a house blend for espresso. The owner will happily talk you through either — several reviewers say the advice is half the reason they come back. It is a women-owned business, and it is small, so mornings are the calmest time to visit.',
-      'menu.eyebrow': 'Menu', 'menu.title': 'What’s on the bar',
-      'menu.lede': 'Tap the plus on anything you like — it goes straight into an order you can pick up at the counter.',
-      'menu.fineprint': 'Prices are indicative and the line-up changes with the season — the board in the shop is the last word.',
-      'reviews.eyebrow': 'Reviews', 'reviews.title': 'What people say on Google',
-      'reviews.count': 'from 361 reviews', 'reviews.mentioned': 'Most mentioned',
-      'reviews.all': 'Read all 361 reviews on Google',
-      'gallery.eyebrow': 'Gallery', 'gallery.title': 'The place, in pictures',
-      'gallery.lede': 'Photos from the shop’s Google listing — guests’ and the owner’s.',
-      'visit.eyebrow': 'Visit', 'visit.title': 'Voldersgracht 6, Delft',
+      'sig.label': 'Signatures', 'sig.title': 'Four things worth the walk',
+      'sig.link': 'All of the menu',
+      'story.label': 'The shop',
+      'story.line1': 'A quiet corner of Delft', 'story.line2': 'that is very good at coffee.',
+      'story.p1': 'White walls, plants along the shelves, coffee gear and bags of beans for sale, nerdy coffee magazines left out on the table, and a long bench where people settle in for an hour.',
+      'story.p2': 'A rotating single origin on filter, a house blend on espresso, and an owner who will happily talk you through either. Women-owned, and small — mornings are the calmest time.',
+      'split.a.title': 'Drink it here', 'split.a.list': 'Espresso bar · Filter & slow · Not coffee',
+      'split.a.cta': 'The bar list',
+      'split.b.title': 'Take it home', 'split.b.list': 'Beans · Brew kit · Sweet things',
+      'split.b.cta': 'The shelf',
+      'menu.label': 'Menu', 'menu.title': 'What’s on the bar',
+      'menu.lede': 'Tap a plus and it goes into an order you collect at the counter.',
+      'menu.fineprint': 'Prices are indicative and the line-up moves with the season — the board in the shop is the last word.',
+      'reviews.label': 'Reviews', 'reviews.title': 'What people say',
+      'reviews.onGoogle': 'on Google', 'reviews.all': 'All 361 on Google',
+      'gallery.label': 'Gallery', 'gallery.title': 'The place',
+      'gallery.lede': 'Photographs from the shop’s Google listing.',
+      'orderCta.label': 'Order ahead', 'orderCta.title': 'Order now,\nskip the queue',
+      'orderCta.body': 'Build your order here, choose a time inside opening hours, and collect it at the counter. Nothing is charged online — you pay in the shop.',
+      'visit.label': 'Visit',
       'visit.note': 'Two minutes from the Markt, on the little canal behind the Nieuwe Kerk. Come by bike, come on foot.',
-      'visit.directions': 'Get directions', 'visit.hoursCaption': 'Opening hours',
-      'visit.hoursNote': 'Hours as listed on Google Maps. Holidays and busy weeks can shift things.',
-      'footer.note': 'Specialty coffee boutique · Voldersgracht 6, Delft',
-      'footer.credit': 'Opening hours, reviews and photos come from the shop’s Google Maps listing.',
-      'order.eyebrow': 'Order ahead', 'order.title': 'Your order',
-      'order.intro': 'Put your order together here, pick a time, and show the ticket at the counter. Nothing is sent and nothing is charged — payment happens in the shop.',
+      'visit.directions': 'Directions', 'visit.hoursCaption': 'Opening hours',
+      'visit.hoursNote': 'Hours as listed on Google Maps.',
+      'footer.tag': 'Coffee boutique · Delft', 'footer.explore': 'Explore', 'footer.find': 'Find us',
+      'footer.credit': 'Opening hours, reviews and photographs come from the shop’s Google Maps listing.',
+      'order.label': 'Order ahead', 'order.title': 'Your order',
+      'order.intro': 'Nothing is sent and nothing is charged — you show the ticket at the counter and pay there.',
       'order.empty': 'Your order is empty.', 'order.browse': 'Browse the menu',
-      'order.where': 'Where are you drinking it?', 'order.inShop': 'In the shop', 'order.takeaway': 'Takeaway',
-      'order.when': 'Pick-up time', 'order.name': 'Name for the cup', 'order.notes': 'Anything else?',
+      'order.where': 'Where', 'order.inShop': 'In the shop', 'order.takeaway': 'Takeaway',
+      'order.when': 'Pick-up', 'order.name': 'Name', 'order.notes': 'Notes',
       'order.total': 'Total', 'order.place': 'Create my ticket', 'order.clear': 'Clear order',
-      'ticket.label': 'Show this at the counter', 'ticket.copy': 'Copy order as text',
+      'ticket.label': 'Show this at the counter', 'ticket.copy': 'Copy as text',
       'ticket.new': 'Start a new order',
-      'ticket.fine': 'Pay in the shop. Prices are indicative — the counter is the last word.',
+      'ticket.fine': 'Pay in the shop. Prices are indicative.',
       'status.open': 'Open now · until {close}',
       'status.opensToday': 'Opens today at {open}',
       'status.closed': 'Closed · opens {day} at {open}',
@@ -52,52 +58,59 @@
       'pickup.hintNext': 'Closed right now — the next pick-up is {day}.',
       'pickup.today': 'today', 'pickup.slot': '{day} at {time}',
       'name.placeholder': 'e.g. Sanne', 'note.placeholder': 'Oat milk, extra hot, one to share…',
-      'toast.added': '{item} added', 'toast.copied': 'Order copied to your clipboard',
-      'toast.cleared': 'Order cleared', 'toast.name': 'Add a name so we can call your order',
-      'ticket.for': 'Name', 'ticket.when': 'Pick-up', 'ticket.where': 'Where', 'ticket.items': 'Items',
-      'milk.label': 'Milk',
-      'facts': ['Dine-in', 'Takeaway', 'Delivery', 'Women-owned', '€1–10 per person', 'Card & cash'],
-      'ticker': ['Specialty coffee', 'Hand-brewed filter', 'Cinnamon buns', 'Beans to take home', 'Oat milk, no charge', 'Coffee magazines on the table', 'Voldersgracht 6, Delft'],
+      'toast.added': '{item} added', 'toast.copied': 'Copied to your clipboard',
+      'toast.cleared': 'Order cleared', 'toast.name': 'Add a name for the cup',
+      'ticket.for': 'Name', 'ticket.when': 'Pick-up', 'ticket.where': 'Where',
+      'milk.label': 'Milk', 'popular': 'a favourite',
+      'facts': ['Dine-in', 'Takeaway', 'Delivery', 'Women-owned', '€1–10 per person'],
+      'marquee': ['Specialty coffee', 'Hand-brewed filter', 'Cinnamon buns', 'Beans to take home', 'Voldersgracht 6, Delft'],
+      'marqueeAlt': ['since the first pour', 'slow mornings', 'while they last', 'for the weekend', 'find us here'],
+      'rail': 'Voldersgracht 6 · Delft — 4,9 on Google',
       'days': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      'closedWord': 'Closed',
-      'storyCaption': 'Inside: shelves of beans and brewing kit, and a bench that invites you to stay.',
+      'closedWord': 'Closed', 'todayLabel': 'Today', 'openLabel': 'open',
     },
     nl: {
       'skip': 'Naar de inhoud',
-      'nav.story': 'De zaak', 'nav.menu': 'Menu', 'nav.reviews': 'Reviews',
+      'nav.signatures': 'Favorieten', 'nav.menu': 'Menu', 'nav.reviews': 'Reviews',
       'nav.gallery': 'Foto’s', 'nav.visit': 'Bezoek',
-      'cta.order': 'Vooruit bestellen', 'cta.orderAhead': 'Vooruit bestellen', 'cta.seeMenu': 'Bekijk het menu',
-      'hero.eyebrow': 'Voldersgracht 6 · Delft',
-      'hero.title1': 'Kleine zaak,', 'hero.title2': 'serieuze koffie.',
-      'hero.lede': 'Een specialty coffee boutique in de oude binnenstad van Delft — filterkoffie met de hand gezet, espresso met zorg getrokken, kaneelbroodjes zolang ze er zijn, en schappen vol bonen voor thuis.',
+      'cta.order': 'Bestellen', 'cta.orderAhead': 'Begin een bestelling', 'cta.menu': 'Het menu',
+      'hero.lede': 'Een specialty coffee boutique aan de Voldersgracht, in de oude binnenstad van Delft. Filterkoffie met de hand gezet, espresso met zorg getrokken, en schappen vol bonen voor thuis.',
+      'hero.line1': 'Kom voor de koffie,', 'hero.line2': 'blijf voor de rust.',
       'hero.reviews': '361 Google-reviews',
-      'story.eyebrow': 'De zaak',
-      'story.title': 'Een stil hoekje van Delft dat toevallig heel goed is in koffie.',
-      'story.p1': 'LOT. zit aan de Voldersgracht, op een paar minuten van de Markt. Binnen is het wit en licht: planten op de schappen, koffiespullen en zakken bonen te koop, nerdy koffiemagazines op tafel, en een lange bank waar mensen een uur blijven hangen.',
-      'story.p2': 'Achter de bar draait een wisselende single origin voor filter en een huisblend voor espresso. De eigenaresse praat je er graag doorheen — volgens meerdere reviewers is dat advies het halve plezier. Het is een vrouwelijke onderneming, en klein, dus ’s ochtends is het het rustigst.',
-      'menu.eyebrow': 'Menu', 'menu.title': 'Wat er op de bar staat',
-      'menu.lede': 'Tik op de plus bij wat je lekker lijkt — het komt meteen in een bestelling die je aan de bar ophaalt.',
+      'sig.label': 'Favorieten', 'sig.title': 'Vier dingen die de omweg waard zijn',
+      'sig.link': 'Het hele menu',
+      'story.label': 'De zaak',
+      'story.line1': 'Een stil hoekje van Delft', 'story.line2': 'dat heel goed is in koffie.',
+      'story.p1': 'Witte muren, planten op de schappen, koffiespullen en zakken bonen te koop, nerdy koffiemagazines op tafel, en een lange bank waar mensen een uur blijven hangen.',
+      'story.p2': 'Een wisselende single origin op filter, een huisblend op espresso, en een eigenaresse die je er graag doorheen praat. Een vrouwelijke onderneming, en klein — ’s ochtends is het het rustigst.',
+      'split.a.title': 'Hier drinken', 'split.a.list': 'Espressobar · Filter & slow · Geen koffie',
+      'split.a.cta': 'De barkaart',
+      'split.b.title': 'Mee naar huis', 'split.b.list': 'Bonen · Brouwspullen · Zoet',
+      'split.b.cta': 'De schappen',
+      'menu.label': 'Menu', 'menu.title': 'Wat er op de bar staat',
+      'menu.lede': 'Tik op een plus en het komt in een bestelling die je aan de bar ophaalt.',
       'menu.fineprint': 'Prijzen zijn indicatief en het aanbod wisselt met het seizoen — het bord in de zaak heeft het laatste woord.',
-      'reviews.eyebrow': 'Reviews', 'reviews.title': 'Wat gasten op Google zeggen',
-      'reviews.count': 'uit 361 reviews', 'reviews.mentioned': 'Meest genoemd',
-      'reviews.all': 'Lees alle 361 reviews op Google',
-      'gallery.eyebrow': 'Foto’s', 'gallery.title': 'De zaak, in beeld',
-      'gallery.lede': 'Foto’s van de Google-pagina — van gasten en van de zaak zelf.',
-      'visit.eyebrow': 'Bezoek', 'visit.title': 'Voldersgracht 6, Delft',
+      'reviews.label': 'Reviews', 'reviews.title': 'Wat gasten zeggen',
+      'reviews.onGoogle': 'op Google', 'reviews.all': 'Alle 361 op Google',
+      'gallery.label': 'Foto’s', 'gallery.title': 'De zaak',
+      'gallery.lede': 'Foto’s van de Google-pagina van de zaak.',
+      'orderCta.label': 'Vooruit bestellen', 'orderCta.title': 'Bestel vooruit,\nsla de rij over',
+      'orderCta.body': 'Stel je bestelling samen, kies een tijd binnen de openingstijden en haal hem op aan de bar. Online wordt niets afgeschreven — je betaalt in de zaak.',
+      'visit.label': 'Bezoek',
       'visit.note': 'Twee minuten van de Markt, aan het grachtje achter de Nieuwe Kerk. Kom op de fiets, kom te voet.',
-      'visit.directions': 'Route plannen', 'visit.hoursCaption': 'Openingstijden',
-      'visit.hoursNote': 'Tijden zoals vermeld op Google Maps. Feestdagen en drukke weken kunnen afwijken.',
-      'footer.note': 'Specialty coffee boutique · Voldersgracht 6, Delft',
+      'visit.directions': 'Route', 'visit.hoursCaption': 'Openingstijden',
+      'visit.hoursNote': 'Tijden zoals vermeld op Google Maps.',
+      'footer.tag': 'Coffee boutique · Delft', 'footer.explore': 'Ontdek', 'footer.find': 'Vind ons',
       'footer.credit': 'Openingstijden, reviews en foto’s komen van de Google Maps-pagina van de zaak.',
-      'order.eyebrow': 'Vooruit bestellen', 'order.title': 'Jouw bestelling',
-      'order.intro': 'Stel je bestelling samen, kies een tijd en laat het bonnetje aan de bar zien. Er wordt niets verstuurd en niets afgeschreven — betalen doe je in de zaak.',
+      'order.label': 'Vooruit bestellen', 'order.title': 'Jouw bestelling',
+      'order.intro': 'Er wordt niets verstuurd en niets afgeschreven — je laat het bonnetje aan de bar zien en betaalt daar.',
       'order.empty': 'Je bestelling is nog leeg.', 'order.browse': 'Bekijk het menu',
-      'order.where': 'Waar drink je het?', 'order.inShop': 'In de zaak', 'order.takeaway': 'Meenemen',
-      'order.when': 'Ophaaltijd', 'order.name': 'Naam op de beker', 'order.notes': 'Nog iets?',
+      'order.where': 'Waar', 'order.inShop': 'In de zaak', 'order.takeaway': 'Meenemen',
+      'order.when': 'Ophalen', 'order.name': 'Naam', 'order.notes': 'Opmerking',
       'order.total': 'Totaal', 'order.place': 'Maak mijn bonnetje', 'order.clear': 'Bestelling wissen',
       'ticket.label': 'Laat dit zien aan de bar', 'ticket.copy': 'Kopieer als tekst',
       'ticket.new': 'Nieuwe bestelling',
-      'ticket.fine': 'Betalen in de zaak. Prijzen zijn indicatief — de bar heeft het laatste woord.',
+      'ticket.fine': 'Betalen in de zaak. Prijzen zijn indicatief.',
       'status.open': 'Nu open · tot {close}',
       'status.opensToday': 'Vandaag open vanaf {open}',
       'status.closed': 'Gesloten · {day} open vanaf {open}',
@@ -107,17 +120,26 @@
       'pickup.hintNext': 'Nu gesloten — de eerste ophaalmogelijkheid is {day}.',
       'pickup.today': 'vandaag', 'pickup.slot': '{day} om {time}',
       'name.placeholder': 'bijv. Sanne', 'note.placeholder': 'Havermelk, extra heet, eentje om te delen…',
-      'toast.added': '{item} toegevoegd', 'toast.copied': 'Bestelling gekopieerd',
-      'toast.cleared': 'Bestelling gewist', 'toast.name': 'Vul een naam in, dan kunnen we je roepen',
-      'ticket.for': 'Naam', 'ticket.when': 'Ophalen', 'ticket.where': 'Waar', 'ticket.items': 'Items',
-      'milk.label': 'Melk',
-      'facts': ['Ter plaatse eten', 'Meenemen', 'Bezorging', 'Vrouwelijke onderneming', '€1–10 p.p.', 'Pin & contant'],
-      'ticker': ['Specialty coffee', 'Handgezette filter', 'Kaneelbroodjes', 'Bonen voor thuis', 'Havermelk zonder toeslag', 'Koffiemagazines op tafel', 'Voldersgracht 6, Delft'],
+      'toast.added': '{item} toegevoegd', 'toast.copied': 'Gekopieerd',
+      'toast.cleared': 'Bestelling gewist', 'toast.name': 'Vul een naam in voor de beker',
+      'ticket.for': 'Naam', 'ticket.when': 'Ophalen', 'ticket.where': 'Waar',
+      'milk.label': 'Melk', 'popular': 'favoriet',
+      'facts': ['Ter plaatse', 'Meenemen', 'Bezorging', 'Vrouwelijke onderneming', '€1–10 p.p.'],
+      'marquee': ['Specialty coffee', 'Handgezette filter', 'Kaneelbroodjes', 'Bonen voor thuis', 'Voldersgracht 6, Delft'],
+      'marqueeAlt': ['sinds de eerste kop', 'rustige ochtenden', 'zolang ze er zijn', 'voor het weekend', 'hier vind je ons'],
+      'rail': 'Voldersgracht 6 · Delft — 4,9 op Google',
       'days': ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'],
-      'closedWord': 'Gesloten',
-      'storyCaption': 'Binnen: schappen met bonen en brouwspullen, en een bank waar je blijft plakken.',
+      'closedWord': 'Gesloten', 'todayLabel': 'Vandaag', 'openLabel': 'open',
     },
   };
+
+  /* The four items shown as signature tiles, with the photo used for each. */
+  const FEATURED = [
+    { itemId: 'flat-white', photo: 5 },
+    { itemId: 'v60', photo: 6 },
+    { itemId: 'iced-latte', photo: 2 },
+    { itemId: 'cinnamon-bun', photo: 1 },
+  ];
 
   const STORE_KEY = 'lot.state.v1';
   const MILK_SECTIONS = ['espresso', 'filter'];
@@ -233,7 +255,10 @@
     document.documentElement.lang = state.lang;
     $$('[data-i18n]').forEach((el) => {
       const value = t(el.dataset.i18n);
-      if (typeof value === 'string') el.textContent = value;
+      if (typeof value !== 'string') return;
+      const sup = el.querySelector('sup');   // superscript counts live in some headings
+      el.textContent = value;
+      if (sup) el.appendChild(sup);
     });
     $('#langLabel').textContent = state.lang === 'en' ? 'NL' : 'EN';
     $('#langBtn').setAttribute('aria-label', state.lang === 'en' ? 'Schakel over naar Nederlands' : 'Switch to English');
@@ -251,25 +276,87 @@
   }
 
   function renderChrome() {
-    $('#heroImg').src = photoUrl(HERO_PHOTO, 1800, 1400);
-    $('#heroImg').alt = HERO_PHOTO.alt[state.lang];
-
-    const story = PHOTOS[7];
-    $('#storyImg').src = photoUrl(story, 900, 1100);
-    $('#storyImg').alt = story.alt[state.lang];
-    $('#storyCaption').textContent = t('storyCaption');
+    setPhoto('#heroImg', HERO_PHOTO, 1600, 1800);
+    setPhoto('#storyImg', PHOTOS[7], 1200, 1000);
+    setPhoto('#splitImg', PHOTOS[3], 1200, 1400);
+    setPhoto('#ctaImg', PHOTOS[10], 1400, 1000);
 
     $('#factsList').innerHTML = t('facts').map((f) => '<li>' + f + '</li>').join('');
 
-    const words = t('ticker');
-    $('#tickerTrack').innerHTML = words.concat(words).map((w) => '<span>' + w + '</span>').join('');
+    /* Marquee: plain caps alternating with a serif italic aside. */
+    const words = t('marquee');
+    const asides = t('marqueeAlt');
+    const strip = words.map((word, i) => (
+      '<span>' + word + '</span><span class="alt">' + (asides[i] || '') + '</span>'
+    )).join('');
+    $('#marqueeTrack').innerHTML = strip + strip;
+
+    $('#railText').textContent = t('rail');
+    /* Superscript counts are an editorial flourish — screen readers skip them. */
+    setCount('#menuCount', MENU.reduce((n, section) => n + section.items.length, 0));
+    setCount('#reviewCount', SHOP.reviewCount);
+    setCount('#galleryCount', PHOTOS.length);
+
+    const lead = REVIEWS[0];
+    $('#leadQuoteText').textContent = '“' + lead.text.split('. ')[0].replace(/\.$/, '') + '.”';
+    $('#leadQuoteAuthor').textContent = lead.author;
 
     $('#allReviewsLink').href = SHOP.reviewsUrl;
-    $('#ratingPill').href = '#reviews';
     $('#directionsBtn').href = SHOP.directionsUrl;
+    $('#footerDirections').href = SHOP.directionsUrl;
     $('#footerMaps').href = SHOP.mapsPlace;
+    $('#footerHours').textContent = todayLine();
+
+    /* The map is loaded once the block has a real size — Google's embed reads
+       the iframe's dimensions when it loads and will not resize afterwards. */
     const frame = $('#mapFrame');
-    if (frame.src !== SHOP.mapEmbed) frame.src = SHOP.mapEmbed;
+    if (!frame.src) {
+      const load = () => { frame.src = SHOP.mapEmbed; };
+      if (document.readyState === 'complete') load();
+      else window.addEventListener('load', load, { once: true });
+    }
+  }
+
+  function setCount(selector, value) {
+    const el = $(selector);
+    el.textContent = value;
+    el.setAttribute('aria-hidden', 'true');
+  }
+
+  function setPhoto(selector, photo, w, h) {
+    const el = $(selector);
+    if (!el || !photo) return;
+    el.src = photoUrl(photo, w, h);
+    el.alt = photo.alt[state.lang];
+  }
+
+  /* "Today  08:00 – 14:00" for the footer. */
+  function todayLine() {
+    const day = amsNow().day;
+    const hours = HOURS[day];
+    return t('todayLabel') + ' · ' + (hours ? hhmm(hours.open) + '–' + hhmm(hours.close) : t('closedWord'));
+  }
+
+  function renderFeatured() {
+    $('#featuredRow').innerHTML = FEATURED.map((entry) => {
+      const hit = findItem({ itemId: entry.itemId });
+      const photo = PHOTOS[entry.photo];
+      if (!hit || !photo) return '';
+      return (
+        '<article class="tile">' +
+          '<div class="tile-media">' +
+            '<img loading="lazy" referrerpolicy="no-referrer" src="' + photoUrl(photo, 700, 700) +
+            '" alt="' + escapeHtml(photo.alt[state.lang]) + '">' +
+          '</div>' +
+          '<div class="tile-body">' +
+            '<span class="tile-name">' + hit.item.name[state.lang] + '</span>' +
+            '<span class="tile-price">' + money(hit.item.price) + '</span>' +
+            '<button class="tile-add" type="button" data-add="' + hit.item.id + '" ' +
+            'aria-label="' + escapeHtml(hit.item.name[state.lang]) + '">+</button>' +
+          '</div>' +
+        '</article>'
+      );
+    }).join('');
   }
 
   function renderMenu() {
@@ -291,7 +378,7 @@
           '<div class="mi-body">' +
             '<div class="mi-head">' +
               '<span class="mi-name">' + item.name[state.lang] + '</span>' +
-              (item.popular ? '<span class="tag">' + (state.lang === 'nl' ? 'favoriet' : 'popular') + '</span>' : '') +
+              (item.popular ? '<span class="tag">' + t('popular') + '</span>' : '') +
               '<span class="mi-dots"></span>' +
               '<span class="mi-price">' + money(item.price) + '</span>' +
             '</div>' +
@@ -309,20 +396,26 @@
     }).join('');
   }
 
+  function selectMenuTab(id) {
+    if (!MENU.some((section) => section.id === id)) return;
+    $('#menuTabs').dataset.active = id;
+    $$('#menuTabs button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.section === id)));
+    $$('.menu-panel').forEach((panel) => { panel.hidden = panel.dataset.panel !== id; });
+    observeReveals();
+  }
+
   function renderReviews() {
     $('#reviewTags').innerHTML = REVIEW_TAGS.map((tag) => (
       '<li>' + tag.label[state.lang] + '<b>' + tag.count + '</b></li>'
     )).join('');
 
-    $('#reviewGrid').innerHTML = REVIEWS.map((review) => (
-      '<article class="review-card reveal">' +
+    /* The first review is the pull quote above, so the grid starts at the second. */
+    $('#reviewGrid').innerHTML = REVIEWS.slice(1).map((review) => (
+      '<article class="quote reveal">' +
         '<span class="stars" aria-label="5 / 5">★★★★★</span>' +
-        '<p class="review-text">' + review.text + '</p>' +
-        '<div class="review-author">' +
-          '<span class="avatar" aria-hidden="true">' + review.author.trim().charAt(0).toUpperCase() + '</span>' +
-          '<span><span class="review-name">' + review.author + '</span><br>' +
-          '<span class="review-meta">' + review.meta + ' · ' + review.when[state.lang] + '</span></span>' +
-        '</div>' +
+        '<p class="quote-text">' + review.text + '</p>' +
+        '<p class="quote-who"><b>' + review.author + '</b>' +
+        review.meta + ' · ' + review.when[state.lang] + '</p>' +
       '</article>'
     )).join('');
   }
@@ -384,8 +477,7 @@
     const list = $('#cartList');
     const count = cartCount();
 
-    $('#cartPip').textContent = count;
-    $('#cartPip').hidden = count === 0;
+    $('#cartPip').textContent = '(' + count + ')';
     $('#cartEmpty').hidden = count > 0;
     $('#orderForm').hidden = count === 0;
     $('#drawerFoot').hidden = count === 0 || !$('#ticket').hidden;
@@ -677,7 +769,7 @@
   }
 
   function watchSections() {
-    const links = $$('.site-nav a');
+    const links = $$('.nav-left a');
     const sections = links
       .map((a) => document.querySelector(a.getAttribute('href')))
       .filter(Boolean);
@@ -697,12 +789,15 @@
     applyStaticStrings();
     renderChrome();
     renderStatus();
+    renderFeatured();
     renderMenu();
     renderReviews();
     renderGallery();
     renderHours();
     renderCart();
     if (state.lastOrder && !$('#ticket').hidden) showTicket(state.lastOrder);
+    $$('.section-head, .tile, .story-copy, .lead-quote, .cta-copy, .visit-copy')
+      .forEach((el) => el.classList.add('reveal'));
     observeReveals();
   }
 
@@ -752,20 +847,23 @@
     /* menu tabs + add buttons */
     $('#menuTabs').addEventListener('click', (event) => {
       const btn = event.target.closest('button[data-section]');
-      if (!btn) return;
-      const id = btn.dataset.section;
-      $('#menuTabs').dataset.active = id;
-      $$('#menuTabs button').forEach((b) => b.setAttribute('aria-selected', String(b === btn)));
-      $$('.menu-panel').forEach((panel) => { panel.hidden = panel.dataset.panel !== id; });
-      observeReveals();
+      if (btn) selectMenuTab(btn.dataset.section);
     });
 
-    $('#menuPanels').addEventListener('click', (event) => {
+    document.addEventListener('click', (event) => {
       const btn = event.target.closest('button[data-add]');
       if (!btn) return;
       addToCart(btn.dataset.add);
       btn.classList.add('pop');
-      setTimeout(() => btn.classList.remove('pop'), 220);
+      setTimeout(() => btn.classList.remove('pop'), 240);
+    });
+
+    /* "The bar list" / "The shelf" jump to the menu with that tab open. */
+    document.addEventListener('click', (event) => {
+      const btn = event.target.closest('button[data-tab]');
+      if (!btn) return;
+      selectMenuTab(btn.dataset.tab);
+      document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
     });
 
     /* gallery */
